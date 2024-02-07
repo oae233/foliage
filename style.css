@@ -1,0 +1,34 @@
+#mybutton{
+    color: red;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drop-area{
+    width: 500px;
+    height: 300px;
+    padding: 50px;
+    background: yellowgreen;
+    text-align: center;
+    border-radius: 40px;
+}
+#img-view{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    border: 2px dashed green;
+    /* background-color: antiquewhite; */
+}
+
+#img-view p{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20%;
+}
