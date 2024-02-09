@@ -20,13 +20,13 @@
 }
 
 #drop-area{
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 400px;
     padding: 20px;
     background: white;
     text-align: center;
     border-radius: 40px;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-right: 50px;
     margin-top: 200px;
     display: inline;
@@ -53,11 +53,11 @@
 .image-grid{
     --gap: 16px;
     --num-cols: 4;
-    --mainsize: 150px;
+    --mainsize: 110px;
     --row-height: var(--mainsize);
     --row-width: var(--mainsize);
 
-    margin-left: 25px;
+    margin-left: 0px;
     margin-top: 150px;
     box-sizing: border-box;
     padding: var(--gap);
@@ -68,9 +68,54 @@
 }
 
 .image-grid img{
+    transition: transform 0.3s ease;
     width: var(--mainsize);
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.image-grid img:hover {
+    transform: scale(2);
+}
+.selected {
+    border: 5px solid rgb(89, 228, 147); /* Adjust as needed */
+}
+
+#hover-text{
+    /* display: none; */
+    z-index: 1000;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 80vh;
+    margin-left: 40%;
+}
+
+
+#pre-hover-text{
+    /* display: none; */
+    z-index: 1000;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 80vh;
+    margin-left: 30%;
+}
+
+#mix-button{
+   position: fixed;;
+   margin-top: 90vh;
+   margin-left: 50vw;
+   margin-right: 50vw;
+
 }
