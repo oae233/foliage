@@ -3,6 +3,9 @@
 }
 
 .hero{
+    border: none;
+    margin: 0;
+    padding: 0;
     width: 100%;
     min-height: 100vh;
     background: black;
@@ -11,10 +14,15 @@
     justify-content: center; */
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
 #drop-area{
-    width: 500px;
+    width: 700px;
     height: 500px;
-    padding: 50px;
+    padding: 20px;
     background: white;
     text-align: center;
     border-radius: 40px;
@@ -26,10 +34,11 @@
 
 }
 #img-view{
+    /* margin: 0; */
     width: 100%;
     height: 100%;
     border-radius: 40px;
-    border: 1px dashed grey;
+    border: 2px dashed rgb(207, 207, 207);
     /* background-color: antiquewhite; */
     background-position: center;
     background-size: cover;
@@ -38,5 +47,30 @@
 #img-view p{
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 45%;
+    margin-top: 30%;
+}
+
+.image-grid{
+    --gap: 16px;
+    --num-cols: 4;
+    --mainsize: 150px;
+    --row-height: var(--mainsize);
+    --row-width: var(--mainsize);
+
+    margin-left: 25px;
+    margin-top: 150px;
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), var(--mainsize));
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid img{
+    width: var(--mainsize);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
 }
